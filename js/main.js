@@ -5,23 +5,23 @@
 let contatoreInizio = 0;
 let contatoreFine = 100;
 
-const fizz = 'FIZZ';
-const buzz = 'BUZZ';
-const fizzBuzz = 'FIZZBUZZ';
+
 
 for (let elementNumber = contatoreInizio + 1; elementNumber <= contatoreFine; elementNumber++) {
-    if (elementNumber % 3 === 0) {
-        console.log(fizz);
+    if (elementNumber % 3 === 0 && elementNumber % 5 === 0) {
+        console.log('FIZZBUZZ');
     }
     else if (elementNumber % 5 === 0) {
-        console.log(buzz);
+        console.log('BUZZ');
     }
-    else if (elementNumber % 3 === 0 && elementNumber % 5 === 0) {
-        console.log(fizzBuzz);
+    else if (elementNumber % 3 === 0) {
+        console.log('FIZZ');
     }
+
     else {
         console.log(elementNumber);
     }
+
 
 }
 
