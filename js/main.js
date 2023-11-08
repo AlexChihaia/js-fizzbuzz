@@ -5,22 +5,31 @@
 let contatoreInizio = 0;
 let contatoreFine = 100;
 
-
+const elementUl = document.querySelector('ul.ac-list')
 
 for (let elementNumber = contatoreInizio + 1; elementNumber <= contatoreFine; elementNumber++) {
+    const li = document.createElement('li');
+    const div = document.createElement('div');
+    elementUl.append(li);
+
+    li.classList.add('col-1', 'm-2', 'p-3', 'w-5', 'rounded', 'text-center', 'list-group-item');
     if (elementNumber % 3 === 0 && elementNumber % 5 === 0) {
-        console.log('FIZZBUZZ');
+        li.append('FIZZBUZZ');
+        li.classList.add('fizz-buzz-color');
     }
     else if (elementNumber % 5 === 0) {
-        console.log('BUZZ');
+        li.append('BUZZ');
+        li.classList.add('buzz-color');
     }
     else if (elementNumber % 3 === 0) {
-        console.log('FIZZ');
+        li.append('FIZZ');
+        li.classList.add('fizz-color');
+    }
+    else {
+        li.append(elementNumber);
+        li.classList.add('number-color');
     }
 
-    else {
-        console.log(elementNumber);
-    }
 
 
 }
